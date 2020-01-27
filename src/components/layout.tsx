@@ -1,13 +1,15 @@
 import React, { ReactNode } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import "./layout.css"
+import GlobalStyles from "../styles/global-styles"
+import { ThemeProvider } from "styled-components"
 
 interface LayoutProps {
   children: ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const theme = {}
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,12 +21,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-      </div>
-    </>
+
+      <main>{children}</main>
+    </ThemeProvider>
   )
 }
 

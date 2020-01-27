@@ -1,10 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `⚛️ Gatsby Starter with Typescript`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Kahlil Whitfield`,
+    socialMedia: {
+      twitter: {
+        twitterCard: `summary`,
+        twitterTitle: `darkristy`,
+        twitterDescription: `🏠 my home on the web`,
+        twitterImage: ``,
+        twitterSite: `@darkristy`,
+      },
+      facebook: {
+        facebookUrl: `https://bornwhitfield.space`,
+        facebookTitle: `bornwhitfield`,
+        facebookDescription: `🏠 my home on the web`,
+        facebookImage: ``,
+        facebookType: `website`,
+      },
+    },
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,6 +46,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

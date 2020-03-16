@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Header from './header'
 import GlobalStyles from '../utils/global-styles'
 import { Global } from '@emotion/core'
 
@@ -22,7 +21,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Global styles={GlobalStyles} />
-      <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
     </>
   )

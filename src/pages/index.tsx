@@ -18,8 +18,8 @@ const IndexPage = () => {
   const { description, title } = data.site.siteMetadata
   return (
     <Layout>
-	    <SEO title={title} description={description} keywords='' />
-	    <h1> Hello World</h1>
+      <SEO title={title} description={description} keywords='' />
+      <h1> Hello World</h1>
     </Layout>
   )
 }
